@@ -1,3 +1,6 @@
+/*
+Author: Joshua Bukuru
+*/
 import firebase from "firebase";
 import { ref, onUnmounted } from "vue"; //33.7K (gzipped: 13.2K)
 
@@ -14,9 +17,6 @@ const firebaseApp = firebase.initializeApp(config); //setup and initialise firba
 const db = firebaseApp.firestore(); //grabs database we just created
 const userCollection = db.collection("users");
 
-/*
-Author: Joshua Bukuru
-*/
 export const createUser = (user) => {
   //Adds a user to the users collection
   return userCollection.add(user);
